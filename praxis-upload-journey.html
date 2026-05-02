@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow,noarchive">
 <title>Praxis Upload Modul - geschützter Pitch</title>
+<!--
+  Security note:
+  This static wrapper intentionally exposes salt, IV, KDF parameters, and ciphertext.
+  Salt/IV are not secrets; they are required for browser-side decryption.
+  This protects the pitch from casual browsing, indexing, and accidental exposure,
+  but it is not server-side access control and cannot prevent offline brute force
+  if the HTML file is downloaded.
+-->
 <style>
 :root {
   --bg: #faf7f0;
